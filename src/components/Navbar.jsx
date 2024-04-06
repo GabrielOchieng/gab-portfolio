@@ -13,23 +13,23 @@ const Navbar = () => {
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
-  const router = useRouter();
+  //   const router = useRouter();
 
-  useEffect(() => {
-    if (
-      router.asPath === "/summarizer" ||
-      router.asPath === "/library" ||
-      router.asPath === "/netflix" ||
-      router.asPath === "/notes" ||
-      router.asPath === "/wordle"
-    ) {
-      setNavBg("transparent");
-      setLinkColor("#ecf0f3");
-    } else {
-      setNavBg("#ecf0f3");
-      setLinkColor("#1f2937");
-    }
-  }, [router]);
+  //   useEffect(() => {
+  //     if (
+  //       router.asPath === "/summarizer" ||
+  //       router.asPath === "/library" ||
+  //       router.asPath === "/netflix" ||
+  //       router.asPath === "/notes" ||
+  //       router.asPath === "/wordle"
+  //     ) {
+  //       setNavBg("transparent");
+  //       setLinkColor("#ecf0f3");
+  //     } else {
+  //       setNavBg("#ecf0f3");
+  //       setLinkColor("#1f2937");
+  //     }
+  //   }, [router]);
 
   const handleNav = () => {
     setNav(!nav);

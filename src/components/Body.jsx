@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 const Body = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
+      <div className="max-w-[1240px] w-full h-full mx-auto  min-[300px]:pt-96 min-[320px]:pt-80  p-2 sm:pt-12 lg:pt-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-700">
             LET'S SOLVE PROBLEMS TOGETHER

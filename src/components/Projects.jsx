@@ -21,7 +21,7 @@ const Projects = () => {
             backgroundImg={portfolio}
             projectUrl="https://willycollections.vercel.app"
             projectCode="https://github.com/GabrielOchieng/gab-portfolio"
-            projectPara="Nextjs, React & Tailwind"
+            projectPara="Nextjs, React, Tailwind & EmailJs"
           />
           <ProjectItem
             title="WILLYCOLLECTIONS E-COMMERCE"
