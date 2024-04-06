@@ -1,9 +1,8 @@
 import React from "react";
-import sumzImg from "../public/assets/projects/sumz.png";
-import librayImg from "../public/assets/projects/library.png";
-import netflixImg from "../public/assets/projects/netflix.png";
-import notesImg from "../public/assets/projects/notes.png";
-import wordleImg from "../public/assets/projects/wordle.png";
+import clearlink from "../../public/clearlink.webp";
+import elck from "../../public/elckw.jpeg";
+import skillsconnect from "../../public/skillsconnect.webp";
+import willycollections from "../../public/willycollections.jpg";
 
 import ProjectItem from "./ProjectItem";
 
@@ -17,34 +16,28 @@ const Projects = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
-            title="Article Summarizer"
-            backgroundImg={sumzImg}
+            title="WILLYCOLLECTIONS E-COMMERCE"
+            backgroundImg={willycollections}
             projectUrl="/summarizer"
-            projectPara="React JS, Redux & TailwindCSS"
+            projectPara="React, Firebase, Bootstrap & React Context"
           />
           <ProjectItem
-            title="Library Ecommerce App"
-            backgroundImg={librayImg}
+            title="CLEARLINK"
+            backgroundImg={clearlink}
             projectUrl="/library"
-            projectPara="React JS, Axios, & CSS"
+            projectPara="HTML, CSS & JavaScript"
           />
           <ProjectItem
-            title="Netflix Clone App"
-            backgroundImg={netflixImg}
+            title="ELCK CDC WEBSITE"
+            backgroundImg={elck}
             projectUrl="/netflix"
-            projectPara="Next JS, TypeScript, NextAuth, & MongoDB"
+            projectPara="React, CSS, NodeJs, Express & MongoDB"
           />
           <ProjectItem
-            title="Notes Taking App"
-            backgroundImg={notesImg}
+            title="SKILLSCONNECT"
+            backgroundImg={skillsconnect}
             projectUrl="/notes"
-            projectPara="React JS, TypeScript, & Bootstrap"
-          />
-          <ProjectItem
-            title="Wordle Game"
-            backgroundImg={wordleImg}
-            projectUrl="/wordle"
-            projectPara="JavaScript & CSS"
+            projectPara="Vue, CSS, & Pinia"
           />
         </div>
       </div>
