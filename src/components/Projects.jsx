@@ -18,25 +18,29 @@ const Projects = () => {
           <ProjectItem
             title="WILLYCOLLECTIONS E-COMMERCE"
             backgroundImg={willycollections}
-            projectUrl="/summarizer"
+            projectUrl="https://willycollections.vercel.app"
+            projectCode="/https://github.com/GabrielOchieng/willycollections"
             projectPara="React, Firebase, Bootstrap & React Context"
           />
           <ProjectItem
             title="CLEARLINK"
             backgroundImg={clearlink}
-            projectUrl="/library"
+            projectUrl="https://clear-link-gabrielochieng.vercel.app"
+            projectCode="https://github.com/GabrielOchieng/ClearLink"
             projectPara="HTML, CSS & JavaScript"
           />
           <ProjectItem
             title="ELCK CDC WEBSITE"
             backgroundImg={elck}
-            projectUrl="/netflix"
+            projectUrl="https://elck-cdc.onrender.com/"
+            projectCode="https://github.com/GabrielOchieng/elck-frontend"
             projectPara="React, CSS, NodeJs, Express & MongoDB"
           />
           <ProjectItem
             title="SKILLSCONNECT"
             backgroundImg={skillsconnect}
-            projectUrl="/notes"
+            projectUrl="https://skillsconnect.vercel.app"
+            projectCode="https://github.com/GabrielOchieng/Skillsconnect"
             projectPara="Vue, CSS, & Pinia"
           />
         </div>

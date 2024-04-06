@@ -44,7 +44,7 @@ const Contact = () => {
                 </p>
                 <div className="flex items-center justify-between py-4 max-w-[330px]">
                   <a
-                    href="https://www.linkedin.com/in/geoffrey-paul-b44751174"
+                    href="https://www.linkedin.com/in/gabrielochieng"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -53,7 +53,7 @@ const Contact = () => {
                     </div>
                   </a>
                   <a
-                    href="https://github.com/GeoffreyPaul3"
+                    href="https://github.com/GabrielOchieng"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -66,7 +66,10 @@ const Contact = () => {
                       <AiOutlineMail />
                     </div>
                   </Link>
-                  <a href="/assets/Geoffrey_Paul_Resume.pdf" target="_blank">
+                  <a
+                    href="https://drive.google.com/file/d/1cfwVqOo4NyjJPKyUqm4USox2Ch_QsALC/view"
+                    target="_blank"
+                  >
                     <div className="rounded-full shadow-lg shadow-gray-400 p-6  cursor-pointer hover:scale-105 ease-in duration-300">
                       <BsFillPersonFill />
                     </div>

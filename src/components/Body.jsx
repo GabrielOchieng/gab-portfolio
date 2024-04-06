@@ -49,7 +49,10 @@ const Body = () => {
                 <AiOutlineMail />
               </div>
             </Link>
-            <a href="/assets/Geoffrey_Paul_Resume.pdf" target="_blank">
+            <a
+              href="https://drive.google.com/file/d/1cfwVqOo4NyjJPKyUqm4USox2Ch_QsALC/view"
+              target="_blank"
+            >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <BsFillPersonFill />
               </div>

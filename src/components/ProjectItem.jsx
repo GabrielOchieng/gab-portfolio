@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const ProjectItem = ({ title, backgroundImg, projectUrl, projectPara }) => {
+const ProjectItem = ({
+  title,
+  backgroundImg,
+  projectUrl,
+  projectPara,
+  projectCode,
+}) => {
   return (
     <div
       className="relative flex items-center justify-center h-auto w-full shadow-xl 
@@ -18,11 +24,18 @@ const ProjectItem = ({ title, backgroundImg, projectUrl, projectPara }) => {
           {title}
         </h3>
         <p className="pb-4 pt-2 text-white text-center">{projectPara}</p>
-        <Link href={projectUrl}>
-          <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold text-lg cursor-pointer">
-            More Info
-          </p>
-        </Link>
+        <div className="flex gap-3">
+          <Link href={projectCode} target="_blank" rel="noopener noreferrer">
+            <p className="text-center py-3 rounded-lg  text-gray-700 font-bold text-lg cursor-pointer">
+              <button className="px-8 py-2 mt-4">Code</button>
+            </p>
+          </Link>
+          <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
+            <p className="text-center py-3 rounded-lg text-gray-700 font-bold text-lg cursor-pointer">
+              <button className="px-8 py-2 mt-4">Demo</button>
+            </p>
+          </Link>
+        </div>
       </div>
     </div>
   );
