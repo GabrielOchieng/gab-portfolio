@@ -13,24 +13,22 @@ const About = () => {
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-700">Front-End Developer</p>
           <p className="py-2 text-gray-700">
-            I&#39;m a Malawian
-            <span className="text-[#5651e5]"> frontend engineer</span> of 22
-            years old. I&apos;ve spent the last five years working as a
-            professional beat maker in music production. I&apos;ve always
-            enjoyed technology and dealing with computers. In 2022, I began
-            working with HTML and CSS.
+            I'm a Kenyan
+            <span className="text-[#5651e5]"> Software Developer</span> with a
+            passion for front-end engineering. While I took a BSc. Public Health
+            as my undergraduate degree, I've always held a strong interest in
+            technology. In 2022, I took the leap and began diving into web
+            development, starting with the fundamentals; HTML and CSS.
           </p>
           <p className="py-2 text-gray-700">
-            I was immediately drawn to study more after becoming amazed with how
-            sophisticated programming can be. I began learning Javascript and
-            became even more excited about creating interactive websites.
-            I&#39;m now spending my time developing projects with React Js, Next
-            Js, Redux, Firebase, MongoDB, and learning new technologies. Every
-            day, I work on extremely complex technical issues and learn from a
-            team of some of the most
-            <span className="text-[#5651e5]"> skilled</span> and
-            <span className="text-[#5651e5]"> experienced</span> software
-            developers every day.
+            Fueled by the intricate power of programming, I delved deeper into
+            web development after being captivated by its potential. JavaScript
+            became my gateway, and the thrill of building interactive websites
+            solidified my passion. Now, I'm actively building projects using
+            React.js, Next.js, Redux, Firebase, and MongoDB. Every day brings
+            fresh challenges, pushing me to learn and grow alongside a team of
+            <span className="text-[#5651e5]"> talented</span> software
+            developers.
           </p>
           <Link href="/#projects">
             <p className="py-2 text-gray-700 underline cursor-pointer">
@@ -45,7 +43,7 @@ const About = () => {
         >
           <Image
             className="rounded-xl"
-            src="/assets/aboutMe.jpg"
+            src="/coding.webp"
             width="700"
             height="800"
             style={{ objectFit: "cover" }}
