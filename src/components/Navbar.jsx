@@ -112,7 +112,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-gray-300 my-4">
               <p className="w-[100%] md:w-[90%] py-4">
-                Let\'s build something that makes a real difference together.
+                Let us build something that makes a real difference together.
               </p>
             </div>
           </div>
