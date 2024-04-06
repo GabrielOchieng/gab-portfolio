@@ -11,14 +11,13 @@ const About = () => {
             About
           </p>
           <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-700">Front-End Developer</p>
+          <p className="py-2 text-gray-700">Software Developer</p>
           <p className="py-2 text-gray-700">
-            I'm a Kenyan
-            <span className="text-[#5651e5]"> Software Developer</span> with a
-            passion for front-end engineering. While I took a BSc. Public Health
-            as my undergraduate degree, I've always held a strong interest in
-            technology. In 2022, I took the leap and began diving into web
-            development, starting with the fundamentals; HTML and CSS.
+            I'm a<span className="text-[#5651e5]"> Software Developer</span>{" "}
+            with a passion for front-end engineering. While I took a BSc. Public
+            Health as my undergraduate degree, I've always held a strong
+            interest in technology. In 2022, I took the leap and began diving
+            into web development, starting with the fundamentals; HTML and CSS.
           </p>
           <p className="py-2 text-gray-700">
             Fueled by the intricate power of programming, I delved deeper into

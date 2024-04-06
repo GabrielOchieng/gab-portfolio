@@ -101,12 +101,7 @@ const Navbar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link href="/">
-                <Image
-                  src="/assets/navLogo.png"
-                  alt="/"
-                  width={87}
-                  height={35}
-                />
+                <Image src="/LOGO.jpg" alt="/" width={87} height={35} />
               </Link>
               <div
                 onClick={handleNav}
@@ -116,8 +111,8 @@ const Navbar = () => {
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4">
-                Let&#39;s build something legendary together
+              <p className="w-[100%] md:w-[90%] py-4">
+                Let's build something that makes a real difference together.
               </p>
             </div>
           </div>
@@ -155,7 +150,7 @@ const Navbar = () => {
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <a
-                  href="https://www.linkedin.com/in/geoffrey-paul-b44751174"
+                  href="https://www.linkedin.com/in/gabrielochieng"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -164,7 +159,7 @@ const Navbar = () => {
                   </div>
                 </a>
                 <a
-                  href="https://github.com/GeoffreyPaul3"
+                  href="https://github.com/GabrielOchieng"
                   target="_blank"
                   rel="noreferrer"
                 >

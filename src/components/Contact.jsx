@@ -22,18 +22,20 @@ const Contact = () => {
               <div>
                 <Image
                   className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src="/assets/contact.jpg"
+                  src="/contact.png"
                   width="800"
                   height="1000"
                   alt="/"
                 />
               </div>
               <div className="pt-8">
-                <h2 className="py-4">Geoffrey Paul</h2>
-                <p>Front-End Developer</p>
+                <h2 className="py-4">Gabriel Ochieng</h2>
+                <p>Software Developer</p>
                 <p className="py-4">
-                  I&#39;m currently open to new opportunities, both freelancing
-                  and full-time positions. Contact me and let&apos;s talk.
+                  I'm currently seeking new challenges! Whether it's a freelance
+                  project or a full-time position, I'm eager to leverage my
+                  skills and keep learning. Feel free to reach out and connect -
+                  let's discuss how I can contribute to your project or team!
                 </p>
               </div>
               <div>
