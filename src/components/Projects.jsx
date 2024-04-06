@@ -19,7 +19,7 @@ const Projects = () => {
           <ProjectItem
             title="PORTFOLIO WEBSITE"
             backgroundImg={portfolio}
-            projectUrl="https://willycollections.vercel.app"
+            projectUrl="https://gab-portfolio-beta.vercel.app"
             projectCode="https://github.com/GabrielOchieng/gab-portfolio"
             projectPara="Nextjs, React, Tailwind & EmailJs"
           />
