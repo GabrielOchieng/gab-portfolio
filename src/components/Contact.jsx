@@ -32,10 +32,11 @@ const Contact = () => {
                 <h2 className="py-4">Gabriel Ochieng</h2>
                 <p>Software Developer</p>
                 <p className="py-4">
-                  I'm currently seeking new challenges! Whether it's a freelance
-                  project or a full-time position, I'm eager to leverage my
-                  skills and keep learning. Feel free to reach out and connect -
-                  let's discuss how I can contribute to your project or team!
+                  I am currently seeking new challenges! Whether it is a
+                  freelance project or a full-time position, I am eager to
+                  leverage my skills and keep learning. Feel free to reach out
+                  and connect - let us discuss how I can contribute to your
+                  project or team!
                 </p>
               </div>
               <div>
