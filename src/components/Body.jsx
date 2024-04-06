@@ -27,7 +27,7 @@ const Body = () => {
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <a
-              href="https://www.linkedin.com/in/geoffrey-paul-b44751174"
+              href="https://www.linkedin.com/in/gabrielochieng"
               target="_blank"
               rel="noreferrer"
             >
@@ -36,7 +36,7 @@ const Body = () => {
               </div>
             </a>
             <a
-              href="https://github.com/GeoffreyPaul3"
+              href="https://github.com/GabrielOchieng"
               target="_blank"
               rel="noreferrer"
             >
