@@ -17,15 +17,15 @@ const Body = () => {
           </h1>
           <h1 className="py-4 text-gray-800">A Software Developer</h1>
           <p className="py-4 text-gray-700 max-w-[70%] m-auto">
-            I am an experienced Software Developer adept in bringing forth
-            expertise in design, installation, testing and maintenance of
-            software systems. Proficient in various platforms, languages, and
-            embedded systems. Experienced with the latest cutting edge
-            development tools and procedures. Able to effectively self-manage
-            during independent projects, as well as collaborate as part of a
-            productive team.
+            I am a highly motivated software developer eager to leverage my
+            skills in design, installation, testing, and maintaining software
+            systems. I'm passionate about learning new technologies and
+            constantly explore the latest cutting-edge development tools and
+            procedures. I thrive in collaborative environments that allow me to
+            contribute my technical expertise and dedication while learning from
+            experienced developers.
           </p>
-          <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
+          <div className="flex items-center justify-between gap-2 max-w-[330px] m-auto py-4">
             <a
               href="https://www.linkedin.com/in/gabrielochieng"
               target="_blank"
@@ -34,6 +34,7 @@ const Body = () => {
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <FaLinkedinIn />
               </div>
+              <p className="pt-2">LinkedIn</p>
             </a>
             <a
               href="https://github.com/GabrielOchieng"
@@ -43,19 +44,22 @@ const Body = () => {
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <FaGithub />
               </div>
+              <p className="pt-2">Github</p>
             </a>
             <Link href="/#contact">
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <AiOutlineMail />
               </div>
+              <p className="pt-2">Contact</p>
             </Link>
             <a
-              href="https://drive.google.com/file/d/1eZYIevsD101jynh9LZmRFMByvmwxXn-u/view?usp=sharing"
+              href="https://drive.google.com/file/d/1DDV5_wiIQ9zJolJzG9a2vur_drSH0Si5/view?usp=drive_link"
               target="_blank"
             >
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <BsFillPersonFill />
               </div>
+              <p className="pt-2">Resume</p>
             </a>
           </div>
         </div>

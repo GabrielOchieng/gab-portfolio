@@ -16,21 +16,15 @@ const About = () => {
           <h2 className="py-4">Who I Am</h2>
           <p className="py-2 text-gray-700">Software Developer</p>
           <p className="py-2 text-gray-700">
-            I am a<span className="text-[#5651e5]"> Software Developer</span>{" "}
-            with a passion for front-end engineering. While I took a BSc. Public
-            Health as my undergraduate degree, I have always held a strong
-            interest in technology. In 2022, I took the leap and began diving
-            into web development, starting with the fundamentals; HTML and CSS.
+            I am a Software Developer with a passion for front-end engineering.
+            While I took a BSc. Public Health as my undergraduate degree, I have
+            always held a strong interest in technology. In 2022, I took the
+            leap and began diving into web development.
           </p>
           <p className="py-2 text-gray-700">
-            Fueled by the intricate power of programming, I delved deeper into
-            web development after being captivated by its potential. JavaScript
-            became my gateway, and the thrill of building interactive websites
-            solidified my passion. Now, I am actively building projects using
-            React.js, Next.js, Redux, Firebase, and MongoDB. Every day brings
-            fresh challenges, pushing me to learn and grow alongside a team of
-            <span className="text-[#5651e5]"> talented</span> software
-            developers.
+            Now, I am actively building projects using React.js, Next.js, Redux,
+            Firebase, and MongoDB. Every day brings fresh challenges, pushing me
+            to learn and grow alongside a team of talented software developers.
           </p>
           <Link href="/#projects">
             <p className="py-2 text-gray-700 underline cursor-pointer">
@@ -38,19 +32,22 @@ const About = () => {
             </p>
           </Link>
         </div>
+
         <div
           className="w-full h-full m-auto shadow-xl shadow-gray-400 
                     rounded-xl flex items-center justify-center p-4 
                     hover:scale-105 ease-in duration-300"
         >
-          <Image
-            className="rounded-xl"
-            src="/coding.webp"
-            width="700"
-            height="800"
-            style={{ objectFit: "cover" }}
-            alt="/"
-          />
+          <a href="/#projects">
+            <Image
+              className="rounded-xl cursor-pointer"
+              src="/coding.webp"
+              width="700"
+              height="800"
+              style={{ objectFit: "cover" }}
+              alt="home"
+            />
+          </a>
         </div>
       </div>
     </div>

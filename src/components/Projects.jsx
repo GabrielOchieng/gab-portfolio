@@ -1,7 +1,7 @@
 import React from "react";
 import clearlink from "../../public/clearlink.webp";
 import elck from "../../public/elckw.jpeg";
-import portfolio from "../../public/PORTFOLIO.webp";
+// import portfolio from "../../public/PORTFOLIO.webp";
 import skillsconnect from "../../public/skillsconnect.webp";
 import willycollections from "../../public/willycollections.jpg";
 
@@ -16,13 +16,13 @@ const Projects = () => {
         </p>
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <ProjectItem
+          {/* <ProjectItem
             title="PORTFOLIO WEBSITE"
             backgroundImg={portfolio}
             projectUrl="https://gab-portfolio-beta.vercel.app"
             projectCode="https://github.com/GabrielOchieng/gab-portfolio"
             projectPara="Nextjs, React, Tailwind & EmailJs"
-          />
+          /> */}
           <ProjectItem
             title="WILLYCOLLECTIONS E-COMMERCE"
             backgroundImg={willycollections}
