@@ -19,7 +19,7 @@ const Body = () => {
           <p className="py-4 text-gray-700 max-w-[70%] m-auto">
             I am a highly motivated software developer eager to leverage my
             skills in design, installation, testing, and maintaining software
-            systems. I'm passionate about learning new technologies and
+            systems. I am passionate about learning new technologies and
             constantly explore the latest cutting-edge development tools and
             procedures. I thrive in collaborative environments that allow me to
             contribute my technical expertise and dedication while learning from
