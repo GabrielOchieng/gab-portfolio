@@ -4,6 +4,7 @@ import elck from "../../public/elckw.jpeg";
 import photoweb from "../../public/header_background.webp";
 import skillsconnect from "../../public/skillsconnect.webp";
 import willycollections from "../../public/willycollections.jpg";
+import task from "../../public/task.jpeg";
 
 import ProjectItem from "./ProjectItem";
 
@@ -22,6 +23,13 @@ const Projects = () => {
             projectUrl="https://willycollections.vercel.app"
             projectCode="https://github.com/GabrielOchieng/willycollections"
             projectPara="React, Firebase, Bootstrap & React Context"
+          />
+          <ProjectItem
+            title="TASK MANAGEMENT WEBSITE"
+            backgroundImg={task}
+            projectUrl="https://task-manager-r6wk.onrender.com"
+            projectCode="https://github.com/GabrielOchieng/task-manager"
+            projectPara="React, Tailwind, Redux, Node.js, Express, MongoDB"
           />
           <ProjectItem
             title="PHOTOWEB"
