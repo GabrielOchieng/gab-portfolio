@@ -60,7 +60,7 @@ const ProjectItem = ({
 
       {/* Modal content (wrapped in a conditional statement) */}
       {showDetails && (
-        <div className="absolute inset-0 bg-gray-500 text-white bg-opacity-75 flex items-center justify-center z-50">
+        <div className="absolute inset-0 bg-gray-200 text-white bg-opacity-75 flex items-center justify-center z-50">
           <div className="bg-gradient-to-r from-[#5651e5] to-[#709dff] rounded-lg shadow-lg p-4 w-full max-w-md">
             <h2 className="text-xl font-bold mb-4">{title}</h2>
             <p className="mb-4">{description}</p>
