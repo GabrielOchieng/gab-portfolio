@@ -18,21 +18,21 @@ const Projects = () => {
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
+            title="TASK MANAGEMENT WEBSITE"
+            backgroundImg={task}
+            projectUrl="https://task-manager-r6wk.onrender.com"
+            projectCode="https://github.com/GabrielOchieng/task-manager"
+            projectPara="React, Tailwind, Redux, Node.js, Express, MongoDB, Node-Schedule."
+            description="This website helps manage tasks and teams with different user roles. Users can register  and then the admin assigns 'manager' roles to some of them. Managers can then control tasks and departments for their teams. They can create new departments, edit existing ones, or even delete them if needed. They can also add, change, or remove tasks assigned to their team members. The users can also view tasks assigned to them and mark them as complete after which they are removed from the job-board. To help managers stay on top of things, the website provides a special dashboard. This dashboard uses charts and bars to show how well the teams and departments are doing. This way, managers can easily see where things stand and make adjustments as needed. The employees also get reminders/notifications via email for their tasks that are almost due. You can sign in as a manager using the email: manager@gmail.com and password: 123"
+          />
+
+          <ProjectItem
             title="WILLYCOLLECTIONS E-COMMERCE"
             backgroundImg={willycollections}
             projectUrl="https://willycollections.vercel.app"
             projectCode="https://github.com/GabrielOchieng/willycollections"
             projectPara="React, Firebase, Bootstrap & React Context"
             description="This is a full-featured React e-commerce application that allows users to browse, search, add items to carts, checkout, and manage orders.Bootstrap is used for the styling providing a clean and user-friendly interface. Customers can easily browse through product categories, view detailed descriptions and images, all with a few clicks! They can also select the products they want and add them to their shopping cart. Firebase is also used to manage the backend stuff. It manages user accounts, shopping carts, and even order making and confirmation. This allows for a secure and streamlined checkout process, making it easy for customers to complete their orders"
-          />
-
-          <ProjectItem
-            title="TASK MANAGEMENT WEBSITE"
-            backgroundImg={task}
-            projectUrl="https://task-manager-r6wk.onrender.com"
-            projectCode="https://github.com/GabrielOchieng/task-manager"
-            projectPara="React, Tailwind, Redux, Node.js, Express, MongoDB"
-            description="This website helps manage tasks and teams with different user roles. Users can register and then the admin assigns 'manager' roles to some of them. Managers can then control tasks and departments for their teams. They can create new departments, edit existing ones, or even delete them if needed. They can also add, change, or remove tasks assigned to their team members. The users can also view tasks assigned to them and mark them as complete after which they are removed from the job-board. To help managers stay on top of things, the website provides a special dashboard. This dashboard uses charts and bars to show how well the teams and departments are doing. This way, managers can easily see where things stand and make adjustments as needed"
           />
 
           <ProjectItem
