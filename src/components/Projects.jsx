@@ -22,8 +22,11 @@ const Projects = () => {
             backgroundImg={task}
             projectUrl="https://task-manager-r6wk.onrender.com"
             projectCode="https://github.com/GabrielOchieng/task-manager"
-            projectPara="React, Tailwind, Redux, Node.js, Express, MongoDB, Node-Schedule."
-            description="This website helps manage tasks and teams with different user roles. Users can register  and then the admin assigns 'manager' roles to some of them. Managers can then control tasks and departments for their teams. They can create new departments, edit existing ones, or even delete them if needed. They can also add, change, or remove tasks assigned to their team members. The users can also view tasks assigned to them and mark them as complete after which they are removed from the job-board. To help managers stay on top of things, the website provides a special dashboard. This dashboard uses charts and bars to show how well the teams and departments are doing. This way, managers can easily see where things stand and make adjustments as needed. The employees also get reminders/notifications via email for their tasks that are almost due. You can sign in as a manager using the email: manager@gmail.com and password: 123"
+            projectPara="React, Tailwind, Redux, Chart.js Node.js, Express, MongoDB & Node-Schedule."
+            description="This is a task management website built for teams! TASKY empowers managers with features like team control, department management, and insightful dashboards. Users can view assignments, track progress, and receive timely reminders.TASKY offers a fast, secure, and user-friendly experience. 
+
+You can sign in as a manager using the email: manager@gmail.com and password: 123
+"
           />
 
           <ProjectItem
