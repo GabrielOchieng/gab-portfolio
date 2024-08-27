@@ -5,6 +5,7 @@ import photoweb from "../../public/header_background.webp";
 import skillsconnect from "../../public/skillsconnect.webp";
 import willycollections from "../../public/willycollections.jpg";
 import task from "../../public/task.jpeg";
+import house from "../../public/house-rent.jpeg";
 
 import ProjectItem from "./ProjectItem";
 
@@ -17,6 +18,23 @@ const Projects = () => {
         </p>
         <h2 className="py-4">What I&apos;ve Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
+          <ProjectItem
+            title="RENTEASY WEBSITE"
+            backgroundImg={house}
+            projectUrl="https://renteasy-zhop.onrender.com"
+            projectCode="https://github.com/GabrielOchieng/renteasy"
+            projectPara="React, Tailwind, Redux, Socket.io, Node.js, Express, MongoDB & Node-Schedule."
+            description="RentEasy is a user-friendly online platform that connects landlords and tenants. Landlords can list their properties with detailed information and photos, while tenants can search for rentals based on their preferences. The platform features a built-in map tool for easy location visualization and a direct messaging system for communication.RentEasy aims to streamline the rental process and provide a secure and convenient experience for both landlords and tenants.
+
+
+
+
+
+
+
+
+"
+          />
           <ProjectItem
             title="TASK MANAGEMENT WEBSITE"
             backgroundImg={task}
@@ -63,13 +81,13 @@ You can sign in as a manager using the email: manager@gmail.com and password: 12
             projectPara="React, CSS, NodeJs, Express & MongoDB"
             description="This project is the frontend of the ELCK CDC website, that is built with the MERN stack. It has a landing page displaying what the organization does, about it, how to contribute, its partners and the testimonials. You can also move to the welcome page where you will be required to register as a user after which you will be able to sign in and view the participants with their details and the activities photos. Furthermore, you can Create, Update and Delete participants/photos as an admin and not as a normal user as these roles are restricted to those registered as admins of the database."
           />
-          <ProjectItem
+          {/* <ProjectItem
             title="SKILLSCONNECT"
             backgroundImg={skillsconnect}
             projectUrl="https://skillsconnect.vercel.app"
             projectCode="https://github.com/GabrielOchieng/Skillsconnect"
             projectPara="Vue, CSS, & Pinia"
-          />
+          /> */}
         </div>
       </div>
     </div>
