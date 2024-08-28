@@ -23,7 +23,7 @@ const Projects = () => {
             backgroundImg={house}
             projectUrl="https://renteasy-zhop.onrender.com"
             projectCode="https://github.com/GabrielOchieng/renteasy"
-            projectPara="React, Tailwind, Redux, Socket.io, Node.js, Express, MongoDB & Node-Schedule."
+            projectPara="React, Tailwind, Redux, Socket.io, Node.js, Express, MongoDB, Cloudinary & Node-Schedule."
             description="RentEasy is a user-friendly online platform that connects landlords and tenants. Landlords can list their properties with detailed information and photos, while tenants can search for rentals based on their preferences. The platform features a built-in map tool for easy location visualization and a direct messaging system for communication.RentEasy aims to streamline the rental process and provide a secure and convenient experience for both landlords and tenants.
 
 
