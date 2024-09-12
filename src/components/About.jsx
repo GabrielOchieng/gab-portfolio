@@ -18,7 +18,7 @@ const About = () => {
           <p className="py-2 text-gray-700">
             I am a Software Developer with a passion for front-end engineering.
             While I took a BSc. Public Health as my undergraduate degree, I have
-            always held a strong interest in technology. In 2022, I took the
+            always held a strong interest in technology. In 2021, I took the
             leap and began diving into web development.
           </p>
           <p className="py-2 text-gray-700">
