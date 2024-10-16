@@ -14,17 +14,18 @@ const About = () => {
             About
           </p>
           <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-700">Software Developer</p>
+          <p className="py-2 text-gray-700">Full-Stack Developer</p>
           <p className="py-2 text-gray-700">
-            I am a Software Developer with a passion for front-end engineering.
-            While I took a BSc. Public Health as my undergraduate degree, I have
-            always held a strong interest in technology. In 2021, I took the
-            leap and began diving into web development.
+            I am a passionate Full-Stack Developer dedicated to creating
+            seamless and engaging web applications. Since I began my journey in
+            Software Development, I have embraced the challenges of both
+            front-end and back-end work, always striving to expand my knowledge.
           </p>
           <p className="py-2 text-gray-700">
-            Now, I am actively building projects using React.js, Next.js, Redux,
-            Firebase, and MongoDB. Every day brings fresh challenges, pushing me
-            to learn and grow alongside a team of talented software developers.
+            I thrive in collaborative environments where sharing ideas and
+            learning from others fuels my growth. Tackling complex problems
+            alongside talented teammates inspires me to deliver high-quality
+            solutions and continuously improve my skills.
           </p>
           <Link href="/#projects">
             <p className="py-2 text-gray-700 underline cursor-pointer">
