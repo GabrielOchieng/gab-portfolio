@@ -50,9 +50,7 @@ const Navbar = () => {
     <div
       style={{ backgroundColor: `${navBg}` }}
       className={
-        shadow
-          ? "fixed w-full h-20 shadow-xl z-[100]"
-          : "fixed w-full h-20 z-[100]"
+        shadow ? "fixed w-full h-20 shadow-xl z-100" : "fixed w-full h-20 z-100"
       }
     >
       <div className="flex justify-between items-center w-full h-full px-6 2xl:px-16">
@@ -94,8 +92,8 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500"
-              : "fixed left-[100%] top-0 p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-background p-10 ease-in duration-500"
+              : "fixed left-full top-0 p-10 ease-in duration-500"
           }
         >
           <div>
@@ -111,7 +109,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[100%] md:w-[90%] py-4">
+              <p className="w-full md:w-[90%] py-4">
                 Let us build something that makes a real difference together.
               </p>
             </div>
@@ -145,7 +143,7 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className="pt-5">
-              <p className="uppercase font-semibold tracking-widest text-[#5651e5]">
+              <p className="uppercase font-semibold tracking-widest text-primary">
                 Let&#39;s connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">

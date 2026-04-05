@@ -57,7 +57,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="w-full lg:h-screen bg-background">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
+      <div className="max-w-310 m-auto px-2 py-16 w-full">
         <p className="text-xl tracking-widest uppercase text-primary font-semibold">
           Contact
         </p>
@@ -100,7 +100,7 @@ const Contact = () => {
                 <p className="uppercase pt-8 pb-4 text-primary font-bold">
                   Connect With Me
                 </p>
-                <div className="flex items-center justify-between py-4 max-w-[330px]">
+                <div className="flex items-center justify-between py-4 max-w-82.5">
                   <a
                     href="https://www.linkedin.com/in/gabrielochieng"
                     target="_blank"
@@ -216,7 +216,7 @@ const Contact = () => {
                 </div>
                 <button
                   disabled={loading}
-                  className={`w-full p-4 text-white mt-4 transition-all duration-300 rounded-lg font-bold shadow-lg shadow-gray-400 bg-gradient-to-r from-primary to-secondary hover:scale-[1.02] active:scale-95 ${
+                  className={`w-full p-4 text-white mt-4 transition-all duration-300 rounded-lg font-bold shadow-lg shadow-gray-400 bg-linear-to-r from-primary to-secondary hover:scale-[1.02] active:scale-95 ${
                     loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
                   }`}
                 >

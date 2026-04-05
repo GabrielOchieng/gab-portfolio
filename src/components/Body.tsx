@@ -7,22 +7,22 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 const Body = () => {
   return (
     <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-[1240px] w-full h-full mx-auto pt-20  2xl:pt-0 p-2 flex justify-center items-center">
+      <div className="max-w-310 w-full h-full mx-auto pt-24  2xl:pt-0 p-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-700">
             LET US SOLVE PROBLEMS TOGETHER
           </p>
           <h1 className="py-4 text-gray-800">
-            Hi, I&#39;m <span className="text-[#5651e5]">GABRIEL</span>
+            Hi, I&#39;m <span className="text-primary">GABRIEL</span>
           </h1>
           <h1 className="py-4 text-gray-800">A Software Developer</h1>
-          <p className="py-4 text-gray-700 max-w-[750px] m-auto leading-relaxed text-sm md:text-base">
+          <p className="py-4 text-gray-700 max-w-187.5 m-auto leading-relaxed text-sm md:text-base">
             I am a highly motivated software developer focused on building{" "}
             <span className="font-semibold text-gray-800">
               scalable web applications
             </span>{" "}
             and integrating{" "}
-            <span className="font-semibold text-[#5651e5]">
+            <span className="font-semibold text-primary">
               AI-driven solutions
             </span>
             . I am passionate about leveraging modern web technologies and
@@ -38,7 +38,7 @@ const Body = () => {
             to solve complex problems and drive high-impact digital experiences.
           </p>
 
-          <div className="flex items-center justify-between gap-2 max-w-[330px] m-auto py-4">
+          <div className="flex items-center justify-between gap-2 max-w-82.5 m-auto py-4">
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/gabrielochieng"

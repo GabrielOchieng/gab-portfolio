@@ -28,7 +28,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   const handleCloseDetails = () => setShowDetails(false);
 
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-gradient-to-r from-primary to-secondary transition-all duration-300">
+    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl p-4 group hover:bg-linear-to-r from-primary to-secondary transition-all duration-300">
       <Image
         className="rounded-xl group-hover:opacity-10 transition-opacity duration-300"
         src={backgroundImg}
@@ -69,7 +69,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 
       {/* Modal - Improved for CX */}
       {showDetails && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-[100] px-4">
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-100 px-4">
           <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md border-t-4 border-primary">
             <h2 className="text-2xl font-bold mb-2 text-gray-800">{title}</h2>
             <p className="text-primary font-semibold text-sm mb-4 uppercase tracking-widest">

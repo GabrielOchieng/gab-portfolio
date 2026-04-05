@@ -32,16 +32,14 @@ const Skills = () => {
 
   return (
     <div id="skills" className="w-full lg:h-screen p-2 md:mb-24 2xl:mb-0">
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
-          Skills
-        </p>
+      <div className="max-w-310 mx-auto flex flex-col justify-center h-full">
+        <p className="text-xl tracking-widest uppercase text-primary">Skills</p>
         <h2 className="py-4">Expertise & Tech Stack</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {skillsList.map((skill, index) => (
             <div
               key={index}
-              className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 border-t-2 border-transparent hover:border-[#5651e5]"
+              className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 border-t-2 border-transparent hover:border-primary"
             >
               <div className="flex flex-col items-center justify-center gap-4">
                 <div className="m-auto">
