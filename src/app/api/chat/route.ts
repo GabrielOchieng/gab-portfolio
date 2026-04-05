@@ -42,7 +42,7 @@ const GABRIEL_KNOWLEDGE_BASE = `
   - Phone: +254792390805
   - LinkedIn: https://www.linkedin.com/in/gabrielochieng
   - GitHub: https://github.com/GabrielOchieng
-  - Portfolio: https://gab-portfolio-beta.vercel.app
+  - Portfolio: https://gabrielochieng.com
 `;
 
 export async function POST(req: Request) {

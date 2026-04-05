@@ -11,11 +11,14 @@ const Body = () => {
           <p className="uppercase text-sm tracking-widest text-gray-700">
             BUILDING THE NEXT GENERATION OF INTELLIGENT SYSTEMS
           </p>
-          <h1 className="py-4 text-gray-800">
+          <h1 className="py-2 sm:py-4 text-gray-800">
             Hi, I&#39;m <span className="text-primary">GABRIEL</span>
           </h1>
-          <h1 className="py-4 text-gray-800">A Software Developer</h1>
-          <p className="py-4 text-gray-700 max-w-187.5 m-auto leading-relaxed text-sm md:text-base">
+          {/* <h1 className="py-2 sm:py-4 text-gray-800">A Software Developer</h1> */}
+          <h1 className="py-2 sm:py-4 text-gray-800 text-3xl sm:text-6xl">
+            A Software Developer
+          </h1>
+          <p className="py-4 text-gray-700 max-w-187.5 m-auto leading-relaxed text-sm md:text-base ">
             I am a highly motivated software developer focused on building{" "}
             <span className="font-semibold text-gray-800">
               scalable web applications
