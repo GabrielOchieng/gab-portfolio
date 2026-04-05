@@ -151,7 +151,7 @@ export default function PortfolioChatbot() {
         whileTap={{ scale: 0.9 }}
         className="bg-primary p-4 rounded-full text-white shadow-2xl flex items-center justify-center cursor-pointer border-none outline-none"
       >
-        {isOpen ? <AiOutlineClose size={20} /> : <AiOutlineMessage size={20} />}
+        {isOpen ? <AiOutlineClose size={28} /> : <AiOutlineMessage size={28} />}
       </motion.button>
 
       <AnimatePresence>
