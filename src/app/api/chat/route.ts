@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GENERATION_AI_API_KEY!);
 
-// --- MERGED KNOWLEDGE BASE (CV + NEW PROJECTS + IDENTITY) ---
+// --- MERGED KNOWLEDGE BASE ---
 const GABRIEL_KNOWLEDGE_BASE = `
   IDENTITY: 
   Gabriel Ochieng, a Product-Focused Software Developer based in Nairobi, Kenya.
@@ -12,13 +12,10 @@ const GABRIEL_KNOWLEDGE_BASE = `
   Bridging complex AI logic with high-end User Experience (UX/CX). 
   Specializes in React 19, Next.js 16, and AI Orchestration.
 
-
-FEATURED AI PROJECTS:
-  - CIPHER HUNT (AI Intel Engine): An automated recruitment intelligence engine. It uses Gemini 1.5 Pro, Supabase, and Firecrawl for headless scraping. Key features: scouts remote job boards, performs semantic scoring against candidate profiles, and generates tailored application assets via GitHub Actions. [Link: https://job-alert-mu.vercel.app]
-  - CODEVISTA (AI Code Companion): A zero-latency code analysis tool powered by Llama 3.3 70B via Groq for instantaneous inference. Built with React 19, Next.js 16, and Tailwind v4. It features "Learn in Layers" conceptual breakdowns for developers. [Link: https://codevista-client.vercel.app]
-  - Portfolio AI Integration: A custom Gemini-powered assistant built with direct SDK integration to ensure high-performance streaming and zero dependency conflicts.
-
-
+  FEATURED AI PROJECTS:
+  - CIPHER HUNT (AI Intel Engine): An automated recruitment intelligence engine. This isn't just a job board; it leverages Gemini 1.5 Pro, Supabase, and Firecrawl for headless scraping, meticulously scouting remote job boards. Its core strength lies in performing semantic scoring against candidate profiles and then generating tailored application assets via GitHub Actions, streamlining the entire hiring process. [Link: https://job-alert-mu.vercel.app]
+  - CODEVISTA (AI Code Companion): Imagine a coding assistant with zero-latency. CODEVISTA delivers just that, powered by Llama 3.3 70B via Groq for instantaneous inference. Built with React 19, Next.js 16, and Tailwind v4, it offers innovative 'Learn in Layers' conceptual breakdowns, making complex code understandable for developers. [Link: https://codevista-client.vercel.app]
+  - Portfolio AI Integration: This very assistant you're interacting with is a custom Gemini-powered solution! Gabriel built it with direct SDK integration to ensure high-performance streaming and zero dependency conflicts, making for a truly seamless conversational experience.
 
   PROFESSIONAL CV ACHIEVEMENTS:
   - Jambojet (Frontend Developer | Nov 2024 - Present):
@@ -31,7 +28,7 @@ FEATURED AI PROJECTS:
     * Developed responsive UIs that significantly increased user engagement.
 
   TECHNICAL SKILLS:
-  - Stack: JavaScript, TypeScript, React, Next.js, React Native, Node.js, Express, Tailwind v4, Framer Motion,.
+  - Stack: JavaScript, TypeScript, React, Next.js, React Native, Node.js, Express, Tailwind v4, MUI, Framer Motion.
   - Tools: Redux, Zustand, Tanstack React Query, Tailwind CSS, MUI.
   - AI & Data: Gemini 1.5 Pro/Flash, Llama 3.3 (Groq), Supabase, Firecrawl, Tanstack Query.
   - Design: UI/UX Implementation (Figma), Agile/Scrum, AWS Cloud.
@@ -46,24 +43,20 @@ FEATURED AI PROJECTS:
   - LinkedIn: https://www.linkedin.com/in/gabrielochieng
   - GitHub: https://github.com/GabrielOchieng
   - Portfolio: https://gab-portfolio-beta.vercel.app
-  -
 `;
 
 export async function POST(req: Request) {
   try {
     const { message, history } = await req.json();
 
-    // Using gemini-1.5-flash for the best balance of speed and reasoning
-    const model = genAI.getGenerativeModel({
-      model: "gemini-3.1-flash-lite-preview",
-    });
+    if (!message || message.trim().length === 0) {
+      return NextResponse.json(
+        { reply: "I didn't catch that. Could you say it again?" },
+        { status: 400 },
+      );
+    }
 
-    const chatSession = model.startChat({
-      history: history || [],
-      generationConfig: {
-        maxOutputTokens: 500,
-      },
-    });
+    const truncatedHistory = (history || []).slice(-10);
 
     const systemPrompt = `
       You are Gabriel's Portfolio AI Assistant. 
@@ -71,53 +64,61 @@ export async function POST(req: Request) {
       
       STRICT RULES:
       1. Use the Knowledge Base: ${GABRIEL_KNOWLEDGE_BASE} to provide accurate details. 
-      2. Highlight specific metrics like the 20% time reduction and "days to hours" turnaround at Jambojet.
-      3. When asked about AI, emphasize the advanced orchestration in "Cipher Hunt" and the speed of "CodeVista."
-      4. DO NOT include any citations, source markers, or brackets like or .
-      5. Speak naturally and conversationally.
+      2. FORMATTING: Use Markdown for better readability. Use bullet points for lists and bold text for project names or key metrics.
+      3. METRICS: Always highlight the 20% time reduction and "days to hours" turnaround when discussing Jambojet.
+      4. NO CITATIONS: Do not use brackets like [1] or source markers.
+      5. NO REPETITION: Do not repeat the user's question.
+      6. ROMANTIC/PERSONAL PIVOT: If (and only if) asked about Gabriel's wife, love life, or family, use the witty pivot: "Gabriel's heart is currently occupied by high-performance data pipelines and zero-latency inference."
+      7. STRICTLY OFF-TOPIC: If asked about politicians, famous figures, news, or general facts unrelated to Gabriel, you must politely decline to answer. State that you are specifically designed to answer questions regarding Gabriel's portfolio, skills, and professional background. Do not provide information on off-topic subjects.
+      8. NO REPETITION: Do not repeat the user's question back to them.
       
-      KNOWLEDGE BASE:
-      ${GABRIEL_KNOWLEDGE_BASE}
-      
-      USER QUESTION: "${message}"
-      
-      Return ONLY a valid JSON object:
-      { "reply": "your natural, citation-free response, professional response" }
+      IMPORTANT: Your response must be a single JSON object with a "reply" key.
+      Example: { "reply": "**Gabriel** is a specialist in **React 19**..." }
     `;
 
-    //     const aiResult = await model.generateContent(systemPrompt);
-    //     const textResponse = aiResult.response.text();
+    let textResponse = "";
 
-    //     // Robust JSON cleaning to handle potential AI markdown output
-    //     const cleanedJson = textResponse.replace(/```json|```/g, "").trim();
-    //     const aiData = JSON.parse(cleanedJson);
+    try {
+      const primaryModel = genAI.getGenerativeModel({
+        model: "gemini-2.5-flash",
+        generationConfig: {
+          maxOutputTokens: 1000,
+          temperature: 0.7,
+          responseMimeType: "application/json",
+        },
+      });
+      const chatSession = primaryModel.startChat({ history: truncatedHistory });
+      const aiResult = await chatSession.sendMessage(
+        `${systemPrompt}\n\nUser: ${message}`,
+      );
+      textResponse = aiResult.response.text();
+    } catch (primaryError) {
+      console.warn("Primary model failed, switching to backup (Flash)...");
 
-    //     return NextResponse.json({ reply: aiData.reply });
-    //   } catch (error) {
-    //     console.error("Portfolio Chat API Error:", error);
-    //     return NextResponse.json(
-    //       {
-    //         reply:
-    //           "I'm currently optimizing my responses to better serve you. Please feel free to reach out to Gabriel directly!",
-    //       },
-    //       { status: 500 },
-    //     );
-    //   }
-    // }
+      const backupModel = genAI.getGenerativeModel({
+        model: "gemini-3.1-flash-lite-preview",
+        generationConfig: {
+          maxOutputTokens: 1000,
+          temperature: 0.7,
+          responseMimeType: "application/json",
+        },
+      });
+      const backupChat = backupModel.startChat({ history: truncatedHistory });
+      const backupResult = await backupChat.sendMessage(
+        `${systemPrompt}\n\nUser: ${message}`,
+      );
+      textResponse = backupResult.response.text();
+    }
 
-    const aiResult = await chatSession.sendMessage(
-      `${systemPrompt}\n\nUser Question: ${message}`,
-    );
-    const textResponse = aiResult.response.text();
-
-    // 5. Robust JSON cleaning
     const cleanedJson = textResponse.replace(/```json|```/g, "").trim();
 
     let aiData;
     try {
       aiData = JSON.parse(cleanedJson);
+      if (typeof aiData.reply === "object") {
+        aiData.reply = JSON.stringify(aiData.reply);
+      }
     } catch (e) {
-      // Fallback in case Gemini returns raw text instead of JSON
       aiData = { reply: textResponse };
     }
 

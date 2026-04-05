@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -10,7 +9,7 @@ const Body = () => {
       <div className="max-w-310 w-full h-full mx-auto pt-24  2xl:pt-0 p-2 flex justify-center items-center">
         <div>
           <p className="uppercase text-sm tracking-widest text-gray-700">
-            LET US SOLVE PROBLEMS TOGETHER
+            BUILDING THE NEXT GENERATION OF INTELLIGENT SYSTEMS
           </p>
           <h1 className="py-4 text-gray-800">
             Hi, I&#39;m <span className="text-primary">GABRIEL</span>
