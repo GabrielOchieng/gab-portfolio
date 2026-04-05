@@ -160,8 +160,11 @@ export default function PortfolioChatbot() {
             initial={{ opacity: 0, y: 50, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 50, scale: 0.95 }}
-            // Add max-height and margin-top to ensure it never touches the very top of the screen
-            className="absolute bottom-16 right-0 w-87.5 h-135 max-h-[74vh] bg-white shadow-2xl rounded-2xl border border-gray-200 flex flex-col overflow-hidden"
+            className="absolute bottom-16 right-0 
+             w-[calc(100vw-2rem)] sm:w-87.5 
+             h-125 max-h-[70vh] 
+             bg-white shadow-2xl rounded-2xl border border-gray-200 
+             flex flex-col overflow-hidden"
           >
             {/* Header with Clear Button */}
             <div className="bg-primary text-white p-2 shadow-md flex justify-between items-center">
