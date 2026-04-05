@@ -48,12 +48,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 
         <div className="flex gap-1 md:gap-3">
           <Link href={projectCode} target="_blank" rel="noopener noreferrer">
-            <button className="px-6 py-1 text-sm md:text-base bg-white text-gray-700 font-bold rounded-lg hover:scale-105 active:scale-95 transition-transform shadow-none normal-case">
+            <button className="px-6 cursor-pointer py-1 text-sm md:text-base bg-white text-gray-700 font-bold rounded-lg hover:scale-105 active:scale-95 transition-transform shadow-none normal-case">
               Code
             </button>
           </Link>
           <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
-            <button className="px-6 py-1 text-sm md:text-base bg-white text-gray-700 font-bold rounded-lg hover:scale-105 active:scale-95 transition-transform shadow-none normal-case">
+            <button className="px-6 cursor-pointer py-1 text-sm md:text-base bg-white text-gray-700 font-bold rounded-lg hover:scale-105 active:scale-95 transition-transform shadow-none normal-case">
               Demo
             </button>
           </Link>
