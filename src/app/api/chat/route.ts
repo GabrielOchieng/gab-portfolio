@@ -200,7 +200,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const truncatedHistory = (history || []).slice(-10);
+    const truncatedHistory = (history || []).slice(-6);
 
     const systemPrompt = `
       You are Gabriel's Portfolio AI Assistant. 
@@ -222,7 +222,8 @@ export async function POST(req: Request) {
 
     try {
       const primaryModel = genAI.getGenerativeModel({
-        model: "gemini-2.5-flash",
+        // model: "gemini-2.5-flash",
+        model: "gemini-3.1-flash-lite-preview",
         generationConfig: {
           maxOutputTokens: 1000,
           temperature: 0.7,
