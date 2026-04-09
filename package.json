@@ -12,6 +12,7 @@
     "@ai-sdk/google": "^3.0.58",
     "@ai-sdk/react": "^3.0.148",
     "@google/generative-ai": "^0.24.1",
+    "@supabase/supabase-js": "^2.103.0",
     "@tailwindcss/postcss": "^4.2.2",
     "ai": "^6.0.146",
     "emailjs-com": "^3.2.0",
