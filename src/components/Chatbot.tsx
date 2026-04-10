@@ -396,7 +396,7 @@ export default function PortfolioChatbot() {
                       `Tell me about Gabriel's ${label.toLowerCase()}`,
                     )
                   }
-                  className="text-[10px] font-bold uppercase border border-primary/30 text-primary px-3 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all cursor-pointer bg-transparent disabled:opacity-50 active:scale-95"
+                  className="text-[10px] font-bold uppercase border border-primary/30 text-white px-3 py-1.5 rounded-full hover:bg-primary hover:text-white transition-all cursor-pointer bg-transparent disabled:opacity-50 active:scale-95"
                 >
                   {label}
                 </button>
