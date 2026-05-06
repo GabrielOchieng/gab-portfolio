@@ -158,12 +158,12 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
           onClick={(e) => e.stopPropagation()}
         >
           <Link href={projectCode} target="_blank" rel="noopener noreferrer">
-            <button className="px-6 py-2 bg-primary md:bg-white text-white md:text-gray-700 font-bold rounded-lg hover:scale-105 active:scale-95 transition-transform">
+            <button className="px-6 py-2 cursor-pointer bg-primary md:bg-white text-white md:text-gray-700 font-bold rounded-lg hover:scale-105 active:scale-95 transition-transform">
               Code
             </button>
           </Link>
           <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
-            <button className="px-6 py-2 bg-primary md:bg-white text-white md:text-gray-700 font-bold rounded-lg hover:scale-105 active:scale-95 transition-transform">
+            <button className="px-6 cursor-pointer py-2 bg-primary md:bg-white text-white md:text-gray-700 font-bold rounded-lg hover:scale-105 active:scale-95 transition-transform">
               Demo
             </button>
           </Link>

@@ -1,14 +1,23 @@
-import React from "react";
 import house from "../../public/house-rent.jpeg";
 import task from "../../public/task.jpeg";
 import willycollections from "../../public/willycollections.jpg";
 import codevistam from "../../public/codevistam.jpg";
 import photoweb from "../../public/header_background.webp";
 import cipherhunt from "../../public/cipherhunt.webp";
+import lyverathrift from "../../public/lyverathrift.jpg";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   const projectsData = [
+    {
+      title: "LYVERA THRIFT: AI WHATSAPP COMMERCE",
+      backgroundImg: lyverathrift,
+      projectUrl: "https://www.lyverathrift.boutique",
+      projectCode: "https://github.com/GabrielOchieng/lyvera-thrift",
+      tech: "Next.js, WhatsApp Business API, Gemini Vision AI, Prisma, PostgreSQL",
+      description:
+        "A dual-interface e-commerce platform featuring a WhatsApp bot with Gemini Vision for automated product ingestion and a state-machine-driven conversational checkout process.",
+    },
     {
       title: "CIPHER HUNT: AI INTEL ENGINE",
       backgroundImg: cipherhunt,
@@ -37,7 +46,7 @@ const Projects = () => {
         "RentEasy is a user-friendly online platform that connects landlords and tenants. Landlords can list properties with detailed info and photos, while tenants can search based on preferences. It features a built-in map tool and a direct messaging system.",
     },
     {
-      title: "TASK MANAGEMENT WEBSITE",
+      title: "TASK MANAGEMENT SYSTEM",
       backgroundImg: task,
       projectUrl: "https://task-manager-r6wk.onrender.com",
       projectCode: "https://github.com/GabrielOchieng/task-manager",
