@@ -79,14 +79,18 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
+        onClick={handleNav}
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav
+            ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70 pointer-events-auto"
+            : ""
         }
       >
         <div
+          onClick={(e) => e.stopPropagation()}
           className={
             nav
-              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] h-screen bg-paper-bright p-10 ease-in duration-500"
+              ? "fixed left-0 top-0 w-[75%] sm:w-[60%] h-screen bg-paper-bright p-10 ease-in duration-500 pointer-events-auto"
               : "fixed left-full top-0 p-10 ease-in duration-500"
           }
         >
@@ -101,7 +105,7 @@ const Navbar = () => {
             </div>
             <div className="border-b border-line my-4">
               <p className="w-full py-4 text-muted">
-                Building the next generation of intelligent systems
+                Product engineering across web, mobile, and AI.
               </p>
             </div>
           </div>
