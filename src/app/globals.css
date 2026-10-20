@@ -769,6 +769,7 @@ html {
   color: var(--color-text-main);
 }
 .impact-console-item p {
+  flex-shrink: 0;
   min-height: 2.7em;
   margin: 7px 0 16px;
   color: var(--color-muted);
