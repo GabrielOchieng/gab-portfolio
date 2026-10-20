@@ -1,34 +1,14 @@
-import house from "../../public/house-rent.jpeg";
-import task from "../../public/task.jpeg";
-import willycollections from "../../public/willycollections.jpg";
-import codevistam from "../../public/codevistam.jpg";
-import photoweb from "../../public/header_background.webp";
-import cipherhunt from "../../public/cipherhunt.webp";
-import lyverathrift from "../../public/lyverathrift.jpg";
+import brandmonitor from "../../public/brandmonitor.png";
+import codevistam from "../../public/codevistam.png";
+import cipherhunt from "../../public/cipherhunt.png";
+import marketvalidator from "../../public/marketvalidator.png";
 import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   const projectsData = [
     {
-      title: "LYVERA THRIFT: AI WHATSAPP COMMERCE",
-      backgroundImg: lyverathrift,
-      projectUrl: "https://www.lyverathrift.boutique",
-      projectCode: "https://github.com/GabrielOchieng/lyvera-thrift",
-      tech: "Next.js, WhatsApp Business API, Gemini Vision AI, Prisma, PostgreSQL",
-      description:
-        "A dual-interface e-commerce platform featuring a WhatsApp bot with Gemini Vision for automated product ingestion and a state-machine-driven conversational checkout process.",
-    },
-    {
-      title: "CIPHER HUNT: AI INTEL ENGINE",
-      backgroundImg: cipherhunt,
-      projectUrl: "https://job-alert-mu.vercel.app", // Update with your link
-      projectCode: "https://github.com/GabrielOchieng/job-alert",
-      tech: "Next.js 15, Gemini 1.5 Pro, Supabase, Firecrawl, GitHub Actions",
-      description:
-        "An automated recruitment intelligence engine. It uses AI orchestration and headless scraping to scout remote job boards, analyze them against candidate profiles using semantic scoring, and generate tailored application assets in real-time.",
-    },
-    {
-      title: "CODEVISTA: AI CODE COMPANION",
+      title: "Codevista: AI Code Companion",
+      category: "Developer Tooling",
       backgroundImg: codevistam,
       projectUrl: "https://codevista-client.vercel.app",
       projectCode: "https://github.com/GabrielOchieng/codevista",
@@ -37,54 +17,47 @@ const Projects = () => {
         "A lightning-fast code analysis tool powered by Groq's high-speed inference engine and Llama 3.3 70B. It provides instantaneous, human-like explanations and 'Learn in Layers' conceptual breakdowns. Designed for zero-latency developer assistance with a modern React 19 and Tailwind v4 frontend.",
     },
     {
-      title: "RENTEASY WEBSITE",
-      backgroundImg: house,
-      projectUrl: "https://renteasy-zhop.onrender.com",
-      projectCode: "https://github.com/GabrielOchieng/renteasy",
-      tech: "React, Tailwind, Redux, Socket.io, Node.js, MongoDB",
+      title: "Brand Monitor",
+      category: "Security / AI SaaS",
+      backgroundImg: brandmonitor,
+      projectUrl: "https://brand-monitor-web-eta.vercel.app",
+      projectCode: "https://github.com/GabrielOchieng/brand-monitor",
+      tech: "Next.js, Fastify, Prisma, PostgreSQL (RLS), Clerk, pg-boss, Playwright, Claude API",
       description:
-        "RentEasy is a user-friendly online platform that connects landlords and tenants. Landlords can list properties with detailed info and photos, while tenants can search based on preferences. It features a built-in map tool and a direct messaging system.",
+        "A multi-tenant brand-impersonation detection platform. Discovers lookalike domains (typosquats, homoglyphs, alternate TLDs), enriches findings via WHOIS/RDAP and live site scans, scores them explainably, and alerts on change. Includes certificate-transparency monitoring, phishing-feed matching, social-impersonation search, and AI-generated plain-English explanations of each score.",
     },
     {
-      title: "TASK MANAGEMENT SYSTEM",
-      backgroundImg: task,
-      projectUrl: "https://task-manager-r6wk.onrender.com",
-      projectCode: "https://github.com/GabrielOchieng/task-manager",
-      tech: "React, Tailwind, Redux, Chart.js, Node.js, MongoDB",
+      title: "Cipher Hunt: AI Job Discovery",
+      category: "AI Automation",
+      backgroundImg: cipherhunt,
+      projectUrl: "https://job-alert-mu.vercel.app",
+      projectCode: "https://github.com/GabrielOchieng/job-alert",
+      tech: "Next.js, React, Supabase, AI integrations, multi-source job APIs",
       description:
-        "TASKY empowers teams and managers with features like department management and insightful dashboards. Users can track progress and receive reminders. Use manager@gmail.com / 123 to test the manager role.",
+        "An automated job-discovery and tracking dashboard for frontend engineers. Aggregates remote listings from multiple job APIs and RSS feeds, filters out region-locked roles, and gives a single dashboard to track application status and tailor materials with AI assistance.",
     },
     {
-      title: "WILLYCOLLECTIONS E-COMMERCE",
-      backgroundImg: willycollections,
-      projectUrl: "https://willycollections.vercel.app",
-      projectCode: "https://github.com/GabrielOchieng/willycollections",
-      tech: "React, Firebase, Bootstrap & React Context",
+      title: "Market Validator",
+      category: "Internal SaaS Tool",
+      backgroundImg: marketvalidator,
+      projectUrl: "https://market-validator-blush.vercel.app",
+      tech: "Next.js, Supabase (Postgres + RLS), Resend, Claude API, Vitest",
       description:
-        "A full-featured e-commerce application allowing users to browse, search, and manage carts. It uses Firebase for backend services including user accounts and order processing.",
-    },
-    {
-      title: "PHOTOWEB",
-      backgroundImg: photoweb,
-      projectUrl: "https://photowebapp.onrender.com",
-      projectCode: "https://github.com/GabrielOchieng/photoweb.git",
-      tech: "Reactjs, Tailwind, Redux, Node.js, Express & MongoDB",
-      description:
-        "A beautiful, responsive UI for browsing memories. Photoweb uses the MERN stack to handle authentication and fetches photos via JSON placeholder.",
+        "A multi-tenant internal tool that replaces manual market-saturation guesswork with a repeatable, logged research process, then runs the reselling business itself once an idea is worth pursuing (orders, wholesale purchase batches, real profit/loss). Includes AI-assisted data fetching across multiple research tiers, a daily automated digest, and an opportunity-scoring engine with full test coverage.",
     },
   ];
 
   return (
-    <div id="projects" className="w-full">
+    <div className="w-full">
       <div className="max-w-310 mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-primary">
-          Projects
-        </p>
-        <h2 className="py-4">What I&apos;ve Built</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <p className="eyebrow">More Builds</p>
+        <h2 className="py-4 text-text-main">Further Along the Way</h2>
+        <div className="flex flex-col gap-8">
           {projectsData.map((project, index) => (
             <ProjectItem
               key={index}
+              number={index + 1}
+              category={project.category}
               title={project.title}
               backgroundImg={project.backgroundImg}
               projectUrl={project.projectUrl}

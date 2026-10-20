@@ -1,103 +1,102 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonFill } from "react-icons/bs";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { useEffect, useRef } from "react";
+import { HiArrowRight, HiArrowUpRight } from "react-icons/hi2";
+import { attachParallax } from "@/lib/parallax";
 
 const Body = () => {
+  const nameRef = useRef<HTMLHeadingElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!stageRef.current) return;
+    return attachParallax(stageRef.current);
+  }, []);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLHeadingElement>) => {
+    const el = nameRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    el.style.setProperty("--name-x", `${x}%`);
+    el.style.setProperty("--name-y", `${y}%`);
+  };
+
+  const handleMouseLeave = () => {
+    const el = nameRef.current;
+    if (!el) return;
+    el.style.setProperty("--name-x", "48%");
+    el.style.setProperty("--name-y", "45%");
+  };
+
   return (
-    <div id="home" className="w-full h-screen text-center">
-      <div className="max-w-310 w-full h-full mx-auto pt-24  2xl:pt-0 p-2 flex justify-center items-center">
-        <div>
-          <p className="uppercase text-sm tracking-widest text-gray-700">
-            BUILDING THE NEXT GENERATION OF INTELLIGENT SYSTEMS
-          </p>
-          <h1 className="py-2 sm:py-4 text-gray-800">
-            Hi, I&#39;m <span className="text-primary">GABRIEL</span>
-          </h1>
-          {/* <h1 className="py-2 sm:py-4 text-gray-800">A Software Developer</h1> */}
-          <h1 className="py-2 sm:py-4 text-gray-800 text-3xl sm:text-6xl">
-            A Software Developer
-          </h1>
-          <p className="py-4 text-gray-700 max-w-187.5 m-auto leading-relaxed text-sm md:text-base ">
-            I am a highly motivated software developer focused on building{" "}
-            <span className="font-semibold text-gray-800">
-              scalable web applications
-            </span>{" "}
-            and integrating{" "}
-            <span className="font-semibold text-primary">
-              AI-driven solutions
-            </span>
-            . I am passionate about leveraging modern web technologies and
-            constantly exploring the latest in{" "}
-            <span className="font-semibold text-gray-800">
-              intelligent system design
-            </span>{" "}
-            and automated workflows. I thrive in collaborative environments that
-            allow me to leverage my technical expertise in{" "}
-            <span className="font-semibold text-gray-800">
-              UI/UX and AI orchestration
-            </span>{" "}
-            to solve complex problems and drive high-impact digital experiences.
-          </p>
+    <section id="home" className="screenbreak-hero">
+      <div className="screenbreak-hero-copy fade-in">
+        <p className="screenbreak-kicker">Product engineer</p>
+        <h1
+          ref={nameRef}
+          className="interactive-hero-name"
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+        >
+          <span>GABRIEL</span>
+          <span>OCHIENG</span>
+        </h1>
+        <p className="screenbreak-lead">
+          I turn complex workflows into intuitive web and mobile products,
+          from internal business platforms to AI-powered commerce. I help
+          shape the solution, build across the stack, and take it through
+          to launch.
+        </p>
+        <p className="screenbreak-stack">
+          React &middot; Next.js &middot; React Native &middot; Node.js
+          &middot; TypeScript / Product Engineering &amp; Applied AI
+        </p>
 
-          <div className="flex items-center justify-between gap-2 max-w-82.5 m-auto py-4">
-            {/* LinkedIn */}
-            <a
-              href="https://www.linkedin.com/in/gabrielochieng"
-              target="_blank"
-              rel="noreferrer"
-              className="flex flex-col items-center"
-            >
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                <FaLinkedinIn />
-              </div>
-              <p className="pt-2 text-xs font-bold uppercase tracking-widest">
-                LinkedIn
-              </p>
-            </a>
-
-            {/* Github */}
-            <a
-              href="https://github.com/GabrielOchieng"
-              target="_blank"
-              rel="noreferrer"
-              className="flex flex-col items-center"
-            >
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                <FaGithub />
-              </div>
-              <p className="pt-2 text-xs font-bold uppercase tracking-widest">
-                Github
-              </p>
-            </a>
-
-            {/* Contact */}
-            <Link href="/#contact" className="flex flex-col items-center">
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                <AiOutlineMail />
-              </div>
-              <p className="pt-2 text-xs font-bold uppercase tracking-widest">
-                Contact
-              </p>
-            </Link>
-
-            {/* Resume */}
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              className="flex flex-col items-center"
-            >
-              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
-                <BsFillPersonFill />
-              </div>
-              <p className="pt-2 text-xs font-bold uppercase tracking-widest">
-                Resume
-              </p>
-            </a>
-          </div>
+        <div className="screenbreak-actions">
+          <Link href="/#projects" className="button-tactile screenbreak-button">
+            Explore the work <HiArrowRight />
+          </Link>
+          <Link href="/#contact" className="screenbreak-text-link">
+            Let&#39;s talk <HiArrowUpRight />
+          </Link>
         </div>
       </div>
-    </div>
+
+      <div ref={stageRef} className="cutout-stage fade-in fade-in-delay-1">
+        <div
+          className="relative overflow-hidden rounded-[20px]"
+          data-depth="0.1"
+          style={{ height: "28rem" }}
+        >
+          <Image
+            className="object-cover"
+            src="/coding.png"
+            alt="Gabriel's workspace, focused on design and code"
+            fill
+            sizes="(min-width: 768px) 55vw, 90vw"
+            priority
+          />
+        </div>
+
+        <p className="cutout-note hidden md:block" data-depth="-0.15">
+          The person behind
+          <br />
+          the systems
+        </p>
+
+        <div className="cutout-trace hidden md:block" data-depth="0.48">
+          <span>event</span> build.shipped
+          <br />
+          <span>state</span> consistent
+          <br />
+          <span>status</span> available
+        </div>
+      </div>
+    </section>
   );
 };
 

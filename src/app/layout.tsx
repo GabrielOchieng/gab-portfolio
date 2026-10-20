@@ -1,11 +1,9 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import React from "react";
 import { Metadata } from "next";
 import Chatbot from "@/components/Chatbot";
-
-const inter = Inter({ subsets: ["latin"] });
+import MotionEffects from "@/components/MotionEffects";
 
 export const metadata: Metadata = {
   title: "Gabriel Ochieng | Product-Focused Software Developer",
@@ -33,10 +31,11 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={true}>
         <Navbar />
         {children}
         <Chatbot />
+        <MotionEffects />
       </body>
     </html>
   );

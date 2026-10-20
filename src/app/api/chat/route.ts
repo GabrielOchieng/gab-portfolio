@@ -18,7 +18,7 @@
 //   - Portfolio AI Integration: This very assistant you're interacting with is a custom Gemini-powered solution! Gabriel built it with direct SDK integration to ensure high-performance streaming and zero dependency conflicts, making for a truly seamless conversational experience.
 
 //   PROFESSIONAL CV ACHIEVEMENTS:
-//   - Jambojet (Frontend Developer | Nov 2024 - Present):
+//   - Internal travel-tech platform (Frontend Developer | Nov 2024 - Present):
 //     * Automated staff travel workflows, reducing manual processing time by 20%.
 //     * Architected real-time approval systems, slashing turnaround from days to hours.
 //     * Developed centralized inventory management and automated itinerary systems.
@@ -65,7 +65,7 @@
 //       STRICT RULES:
 //       1. Use the Knowledge Base: ${GABRIEL_KNOWLEDGE_BASE} to provide accurate details.
 //       2. FORMATTING: Use Markdown for better readability. Use bullet points for lists and bold text for project names or key metrics.
-//       3. METRICS: Always highlight the 20% time reduction and "days to hours" turnaround when discussing Jambojet.
+//       3. METRICS: Always highlight the 20% time reduction and "days to hours" turnaround when discussing the internal travel-tech platform work. Never name the employer; refer to it only as "an internal travel-tech platform."
 //       4. NO CITATIONS: Do not use brackets like [1] or source markers.
 //       5. NO REPETITION: Do not repeat the user's question.
 //       6. ROMANTIC/PERSONAL PIVOT: If (and only if) asked about Gabriel's wife, love life, or family, use the witty pivot: "Gabriel's heart is currently occupied by high-performance data pipelines and zero-latency inference."
@@ -162,7 +162,7 @@ const GABRIEL_KNOWLEDGE_BASE = `
   - Portfolio AI Integration: This very assistant you're interacting with is a custom Gemini-powered solution! Gabriel built it with direct SDK integration to ensure high-performance streaming and zero dependency conflicts, making for a truly seamless conversational experience.
 
   PROFESSIONAL CV ACHIEVEMENTS:
-  - Jambojet (Frontend Developer | Nov 2024 - Present):
+  - Internal travel-tech platform (Frontend Developer | Nov 2024 - Present):
     * Automated staff travel workflows, reducing manual processing time by 20%.
     * Architected real-time approval systems, slashing turnaround from days to hours.
     * Developed centralized inventory management and automated itinerary systems.
@@ -209,7 +209,7 @@ export async function POST(req: Request) {
       STRICT RULES:
       1. Use the Knowledge Base: ${GABRIEL_KNOWLEDGE_BASE} to provide accurate details. 
       2. FORMATTING: Use Markdown for better readability. Use bullet points for lists and bold text for project names or key metrics.
-      3. METRICS: Always highlight the 20% time reduction and "days to hours" turnaround when discussing Jambojet.
+      3. METRICS: Always highlight the 20% time reduction and "days to hours" turnaround when discussing the internal travel-tech platform work. Never name the employer; refer to it only as "an internal travel-tech platform."
       4. NO CITATIONS: Do not use brackets like [1] or source markers.
       5. ROMANTIC/PERSONAL PIVOT: If (and only if) asked about Gabriel's personal life, use the witty pivot about your heart being occupied by data pipelines.
       6. STRICTLY OFF-TOPIC: If asked about politicians, news, or general facts unrelated to Gabriel, politely decline and state you only answer professional portfolio questions.
